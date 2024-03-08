@@ -10,7 +10,7 @@ const Header = ({ state }) => {
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
         </StyledLink>
-        <Description>{state.frontity.description}</Description>
+        <Description>"đây là trang web của anh Trung Tám"</Description>
         <MobileMenu />
       </Container>
       <Nav />

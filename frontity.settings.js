@@ -2,7 +2,7 @@ const settings = {
   "name": "my-first-frontity-project",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
+      "url": "https://buyphone1.wpcomstaging.com/",
       "title": "Test Frontity Blog",
       "description": "WordPress installation for Frontity development"
     }
@@ -18,15 +18,15 @@ const settings = {
               "/"
             ],
             [
-              "Nature",
-              "/category/nature/"
+              "Animal",
+              "/animals"
             ],
             [
-              "Travel",
+              "Tree",
               "/category/travel/"
             ],
             [
-              "Japan",
+              "Travel",
               "/tag/japan/"
             ],
             [
@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "url": "https://buyphone1.wpcomstaging.com/",
         }
       }
     },

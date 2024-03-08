@@ -6,7 +6,8 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-
+import Contact from "./footers/contact";
+import PrivacyPolicy from "./footers/privacy-policy";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -39,14 +40,57 @@ const Theme = ({ state }) => {
 
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
+
+
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           <Post when={data.isPostType} />
+          <Contact when={data.link === '/contact/'} />
+          <PrivacyPolicy when={data.link === '/privacy-policy/'} />
           <PageError when={data.isError} />
         </Switch>
       </Main>
+      <div style={{
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        padding: "20px",
+        backgroundColor: "#1f38c5",
+        color: "#fff",
+        textAlign: "center",
+      
+      }}>
+      <a href="/privacy-policy/"
+      style={{
+        color: "#FFFFFF",
+        textDecoration: "none",
+        fontSize: "16px",
+        marginBottom: "10px",
+        display: "inline-block",
+        marginRight: "50px"
+      }}>Privacy-Policy</a>
+
+<a href="/term-condition/"
+      style={{
+        color: "#FFFFFF",
+        textDecoration: "none",
+        fontSize: "16px",
+        marginBottom: "10px",
+        display: "inline-block",
+        marginRight: "50px"
+      }}>Term&Condition</a>
+<a href="/contact/"
+style={{
+  color: "#FFFFFF",
+  textDecoration: "none",
+  fontSize: "16px",
+  marginBottom: "10px",
+  display: "inline-block"
+  
+}}>Contact</a>
+    </div>
     </>
   );
 };

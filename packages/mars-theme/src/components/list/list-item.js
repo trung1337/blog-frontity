@@ -16,10 +16,9 @@ const Item = ({ state, item }) => {
 
   return (
     <article>
-      <Link link={item.link}>
+      <a href={item.link}>
         <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-      </Link>
-
+      </a>
       <div>
         {/* If the post has an author, we render a clickable author text. */}
         {author && (

@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "layer0:dev": "layer0 dev",
+    "layer0:build": "layer0 build",
+    "layer0:deploy": "layer0 deploy",
+    "dev": "frontity dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider frontity build",
+    "serve": "frontity serve"
+  },
   "name": "my-first-frontity-project",
   "version": "1.0.0",
   "private": true,
@@ -7,21 +15,27 @@
     "frontity"
   ],
   "engines": {
-    "node": ">=10.0.0",
+    "node": "16.x",
     "npm": ">=6.0.0"
-  },
-  "scripts": {
-    "dev": "frontity dev",
-    "build": "frontity build",
-    "serve": "frontity serve"
   },
   "prettier": {},
   "dependencies": {
-    "frontity": "^1.17.2",
     "@frontity/core": "^1.16.0",
-    "@frontity/wp-source": "^1.11.7",
-    "@frontity/tiny-router": "^1.4.4",
     "@frontity/html2react": "^1.7.0",
-    "@frontity/mars-theme": "./packages/mars-theme"
+    "@frontity/mars-theme": "./packages/mars-theme",
+    "@frontity/tiny-router": "^1.4.4",
+    "@frontity/wp-source": "^1.11.7",
+    "antd": "^5.15.0",
+    "frontity": "^1.17.2",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@layer0/cli": "^4.20.0",
+    "@layer0/core": "^4.20.0",
+    "@layer0/devtools": "^4.20.0",
+    "@layer0/frontity": "^4.20.0",
+    "@layer0/prefetch": "^4.20.0",
+    "@layer0/react": "^4.20.0"
   }
 }

@@ -1,4 +1,4 @@
-import { Global, css, connect, styled, Head } from "frontity";
+import { Global, css, connect, styled, Head,Helmet } from "frontity";
 import Switch from "@frontity/components/switch";
 import Header from "./header";
 import List from "./list";
@@ -8,6 +8,7 @@ import Title from "./title";
 import PageError from "./page-error";
 import Contact from "./footers/contact";
 import PrivacyPolicy from "./footers/privacy-policy";
+import Nav from "./nav";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -26,8 +27,9 @@ const Theme = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
+        <html lang="en" />  
       </Head>
+      
 
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
@@ -38,6 +40,8 @@ const Theme = ({ state }) => {
         <Header />
       </HeadContainer>
 
+    
+
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
 
@@ -46,6 +50,7 @@ const Theme = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
+            <Nav/>
           <Post when={data.isPostType} />
           <Contact when={data.link === '/contact/'} />
           <PrivacyPolicy when={data.link === '/privacy-policy/'} />
@@ -107,22 +112,19 @@ const globalStyles = css`
   a:visited {
     color: inherit;
     text-decoration: none;
-  }
+  },
+  background-color: gray;
 `;
 
 const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
 `;
 
 const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  width: 80%;
+  margin: "20px 0 0 0"
 `;

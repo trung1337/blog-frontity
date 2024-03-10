@@ -45,7 +45,7 @@ const NavContainer = styled.nav`
 const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
-  color: #fff;
+  color: #007bff;
   font-size: 0.9em;
   box-sizing: border-box;
   flex-shrink: 0;

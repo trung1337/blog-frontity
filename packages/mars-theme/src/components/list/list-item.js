@@ -13,9 +13,17 @@ import FeaturedMedia from "../featured-media";
 const Item = ({ state, item }) => {
   const author = state.source.author[item.author];
   const date = new Date(item.date);
-
+  const categories = item.categories;
   return (
     <article>
+      <div>
+      Hiển thị các danh mục
+      {/* {categories.map((category) => (
+        <div key={category.id}>
+          {category.name}
+        </div>
+      ))} */}
+    </div>
       <a href={item.link}>
         <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
       </a>
@@ -24,7 +32,7 @@ const Item = ({ state, item }) => {
         {author && (
           <StyledLink link={author.link}>
             <AuthorName>
-              By <b>{author.name}</b>
+               <b>{author.name}</b>
             </AuthorName>
           </StyledLink>
         )}
@@ -79,4 +87,8 @@ const PublishDate = styled.span`
 const Excerpt = styled.div`
   line-height: 1.6em;
   color: rgba(12, 17, 43, 0.8);
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  
 `;

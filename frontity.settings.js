@@ -3,7 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://buyphone1.wpcomstaging.com/",
-      "title": "Test Frontity Blog",
+      "title": "blog information in the world",
       "description": "WordPress installation for Frontity development"
     }
   },
@@ -33,6 +33,7 @@ const settings = {
               "About Us",
               "/about-us/"
             ]
+           
           ],
           "featured": {
             "showOnList": false,
@@ -49,6 +50,7 @@ const settings = {
         }
       }
     },
+   
     "@frontity/tiny-router",
     "@frontity/html2react"
   ]

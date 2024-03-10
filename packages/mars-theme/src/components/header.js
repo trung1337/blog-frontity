@@ -2,6 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
 import MobileMenu from "./menu";
+import SearchBox from "./search-box";
 
 const Header = ({ state }) => {
   return (
@@ -13,7 +14,14 @@ const Header = ({ state }) => {
         <Description>"đây là trang web của anh Trung Tám"</Description>
         <MobileMenu />
       </Container>
+      <div style={{display: "flex", 
+     alignItems: "center",
+     gap: "5",
+     padding: "0 0 20px"
+    }}>
       <Nav />
+      <SearchBox />
+      </div>
     </>
   );
 };
@@ -26,7 +34,7 @@ const Container = styled.div`
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;
-  color: #fff;
+  color: #007bff;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

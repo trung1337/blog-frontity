@@ -17,11 +17,7 @@ function MobileMenu({ state, actions }) {
   return state.frontity.mode === "amp" ? (
     <>
       <Head>
-        <script
-          async={undefined}
-          custom-element="amp-bind"
-          src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
-        ></script>
+        
       </Head>
 
       <MenuToggle>

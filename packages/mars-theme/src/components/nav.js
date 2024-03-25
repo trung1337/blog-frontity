@@ -30,7 +30,7 @@ export default connect(Nav);
 const NavContainer = styled.nav`
   list-style: none;
   display: flex;
-  width: 848px;
+  width: 600px;
   max-width: 100%;
   box-sizing: border-box;
   padding: 0 24px;
@@ -45,8 +45,8 @@ const NavContainer = styled.nav`
 const NavItem = styled.div`
   padding: 0;
   margin: 0 16px;
-  color: #007bff;
-  font-size: 0.9em;
+  color: black;
+  font-size: 20px;
   box-sizing: border-box;
   flex-shrink: 0;
 

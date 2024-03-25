@@ -17,7 +17,6 @@ const Item = ({ state, item }) => {
   return (
     <article>
       <div>
-      Hiển thị các danh mục
       {/* {categories.map((category) => (
         <div key={category.id}>
           {category.name}
@@ -31,6 +30,7 @@ const Item = ({ state, item }) => {
         {/* If the post has an author, we render a clickable author text. */}
         {author && (
           <StyledLink link={author.link}>
+           < img src={author.avatar_urls[96]}/>
             <AuthorName>
                <b>{author.name}</b>
             </AuthorName>

@@ -1,27 +1,54 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
 import Nav from "./nav";
-import MobileMenu from "./menu";
 import SearchBox from "./search-box";
 
 const Header = ({ state }) => {
   return (
     <>
-      <Container>
-        <StyledLink link="/">
-          <Title>{state.frontity.title}</Title>
-        </StyledLink>
-        <Description>"đây là trang web của anh Trung Tám"</Description>
+      {/* <Container>
         <MobileMenu />
-      </Container>
+      </Container> */}
       <div style={{display: "flex", 
      alignItems: "center",
      gap: "5",
-     padding: "0 0 20px"
-    }}>
+     padding: "20px 0 20px",
+width:"100%" ,
+   }}>
+      <div class="logo" style={{
+        flexBasis:"40%"
+      }}>
+        <span style={{
+          color: "#001858",
+          fontSize: "36px",
+          fontWeight: "bold",
+          marginLeft: "95px"
+        }}>World</span>
+        <span style={{
+          color: "Blue",
+          fontSize: "18px",
+          fontWeight: "bold"
+        }}>.Blog</span>
+      </div>
+      <div class="nav" style={{
+        flexBasis: "60%",
+        display:"flex"
+      }}>
+       <div style={{
+        flexBasis: "30%",
+       }} >
       <Nav />
+      </div>
+      <div style={{
+        flexBasis: "70%",
+        alignItems: "center",
+        padding: "6px 0 6px",
+      }} >
       <SearchBox />
       </div>
+      </div>
+      </div>
+      {/* <img src="/packages/mars-theme/src/asset/img/header.png"></img> */}
     </>
   );
 };
@@ -30,7 +57,7 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 const Container = styled.div`
-  width: 848px;
+  width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;

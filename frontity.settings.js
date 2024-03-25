@@ -2,7 +2,7 @@ const settings = {
   "name": "my-first-frontity-project",
   "state": {
     "frontity": {
-      "url": "https://buyphone1.wpcomstaging.com/",
+      "url": "https://blogfrontity.wordpress.com/",
       "title": "blog information in the world",
       "description": "WordPress installation for Frontity development"
     }
@@ -16,6 +16,10 @@ const settings = {
             [
               "Home",
               "/"
+            ],
+            [
+              "football",
+              "football"
             ],
             [
               "Animal",
@@ -46,7 +50,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://buyphone1.wpcomstaging.com/",
+          "url": "https://blogfrontity.wordpress.com/",
         }
       }
     },

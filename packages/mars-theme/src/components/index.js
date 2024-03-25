@@ -9,6 +9,8 @@ import PageError from "./page-error";
 import Contact from "./footers/contact";
 import PrivacyPolicy from "./footers/privacy-policy";
 import Nav from "./nav";
+import Banner from "./banner";
+import Category from "./category";
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -28,7 +30,7 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />  
-      </Head>
+          </Head>
       
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -38,15 +40,18 @@ const Theme = ({ state }) => {
       {/* Add the header of the site. */}
       <HeadContainer>
         <Header />
+       
       </HeadContainer>
 
     
 
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
-
+  <Banner when={data.link === '/'} />
+        <Category when={data.link === '/'} />
 
       <Main>
+    
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
@@ -105,21 +110,21 @@ export default connect(Theme);
 const globalStyles = css`
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family:sans-serif;
   }
   a,
   a:visited {
     color: inherit;
     text-decoration: none;
   },
-  background-color: gray;
+  background-color: #EFF0F3;
 `;
 
 const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #EFF0F3;
 `;
 
 const Main = styled.div`

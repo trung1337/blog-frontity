@@ -11,6 +11,8 @@ import PrivacyPolicy from "./footers/privacy-policy";
 import Nav from "./nav";
 import Banner from "./banner";
 import Category from "./category";
+import SectionHomePage from "./section_home_page";
+
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
@@ -30,7 +32,7 @@ const Theme = ({ state }) => {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />  
-          </Head>
+      </Head>
       
 
       {/* Add some global styles for the whole site, like body or a's. 
@@ -40,19 +42,18 @@ const Theme = ({ state }) => {
       {/* Add the header of the site. */}
       <HeadContainer>
         <Header />
-       
       </HeadContainer>
 
     
 
       {/* Add the main section. It renders a different component depending
       on the type of URL we are in. */}
-  <Banner when={data.link === '/'} />
-        <Category when={data.link === '/'} />
+      {/* <Banner when={data.link === '/'} />
+      <Category when={data.link === '/'} /> */}
 
       <Main>
-    
-        <Switch>
+        <SectionHomePage when={data.link === '/'}/>
+        {/* <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
             <Nav/>
@@ -60,7 +61,7 @@ const Theme = ({ state }) => {
           <Contact when={data.link === '/contact/'} />
           <PrivacyPolicy when={data.link === '/privacy-policy/'} />
           <PageError when={data.isError} />
-        </Switch>
+        </Switch> */}
       </Main>
       <div style={{
         justifyContent: "center",
@@ -111,13 +112,13 @@ const globalStyles = css`
   body {
     margin: 0;
     font-family:sans-serif;
+    background-color: #fff;
   }
   a,
   a:visited {
     color: inherit;
     text-decoration: none;
-  },
-  background-color: #EFF0F3;
+  }
 `;
 
 const HeadContainer = styled.div`
@@ -128,8 +129,5 @@ const HeadContainer = styled.div`
 `;
 
 const Main = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  margin: "20px 0 0 0"
+  margin: 20px 40px 0px 40px;
 `;
